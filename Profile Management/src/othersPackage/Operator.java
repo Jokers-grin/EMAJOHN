@@ -105,8 +105,16 @@ public class Operator
     private void editpWord()
     {
         cin = new Scanner(System.in);
-        String pWord = cin.nextLine();
-        profile.setpWord(pWord);
+        String previouspWord = cin.nextLine();
+        if(previouspWord.equals(profile.getpWord()))
+        {
+            String newpWord = cin.nextLine();
+            profile.setpWord(newpWord);
+        }
+        else
+        {
+            System.out.println("Wrong Password");
+        }
     }
 
     private void editLastName() {
